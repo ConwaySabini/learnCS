@@ -12,14 +12,46 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main className={styles.main}>
-                <h1 className={styles.title}>
-                    Welcome to learnCS
-                </h1>
-            </main>
 
-            <footer className={styles.footer}>
+            <div className="drawer-contentv mt-5">
+                {/* <!-- Page content here --> */}
+                <label htmlFor="my-drawer" className="btn btn-square btn-ghost">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </label>
+            </div>
+            <div className={styles.gridContainer}>
+                <div className={styles.gridCol1}>
+                    <div className="drawer">
+                        <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+                        <div className="drawer-side">
+                            <label htmlFor="my-drawer" className="drawer-overlay"></label>
+                            <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
+                                {/* <!-- Sidebar content here --> */}
+                                <li><button>Arrays</button></li>
+                                <li><a>Linked Lists</a></li>
+                                <li><a>BFS</a></li>
+                                <li><a>DFS</a></li>
+                                <li><a>Dijkstras</a></li>
+                                <li><a>Dijkstras</a></li>
 
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div className={styles.gridCol2}>
+                    <div className="tabs">
+                        <a className="tab tab-lifted">Tab 1</a>
+                        <a className="tab tab-lifted tab-active">Tab 2</a>
+                        <a className="tab tab-lifted">Tab 3</a>
+                    </div>
+                </div>
+            </div>
+
+            <footer className="footer footer-center p-4 bg-base-300 text-base-content">
+                <div>
+                    <p>Copyright © 2022 - All right reserved by ACME Industries Ltd</p>
+                </div>
             </footer>
         </div>
     )
