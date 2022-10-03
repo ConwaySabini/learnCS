@@ -4,11 +4,12 @@ import { MantineProvider } from '@mantine/core';
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
-        <div>
-            <MantineProvider theme={{ colorScheme: 'dark' }}>
+        <>
+            {/* {withGlobalStyles withNormalizeCSS} */}
+            <MantineProvider theme={{ colorScheme: 'dark' }} >
                 <Component {...pageProps} />
-            </MantineProvider>
-        </div>
+            </MantineProvider >
+        </>
     )
 }
 

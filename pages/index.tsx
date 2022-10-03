@@ -17,13 +17,6 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-
-            <div className="drawer-contentv mt-5">
-                {/* <!-- Page content here --> */}
-                <label htmlFor="my-drawer" className="btn btn-square btn-ghost">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                </label>
-            </div>
             <div className={styles.gridContainer}>
                 <SideBar display={displayModule} setDisplay={setDisplayModule}></SideBar>
                 <div className={styles.gridCol2}>
@@ -37,16 +30,6 @@ const Home: NextPage = () => {
                 </div>
             </footer>
         </div >
-    )
-};
-
-export const Arrays = () => {
-    return (
-        <div className="tabs">
-            <a className="tab tab-lifted">Tab 1</a>
-            <a className="tab tab-lifted tab-active">Tab 2</a>
-            <a className="tab tab-lifted">Tab 3</a>
-        </div>
     )
 };
 
