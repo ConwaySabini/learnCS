@@ -1,9 +1,14 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Image from 'next/image';
+import SideBar from '../src/components/SideBar';
+import styles from '../styles/Home.module.css';
+import React, { useState, useEffect } from 'react';
+import Modules from '../src/components/Modules';
 
 const Home: NextPage = () => {
+    const [displayModule, setDisplayModule] = useState('default');
+
     return (
         <div className={styles.container}>
             <Head>
@@ -20,41 +25,29 @@ const Home: NextPage = () => {
                 </label>
             </div>
             <div className={styles.gridContainer}>
-                <div className={styles.gridCol1}>
-                    <div className="drawer">
-                        <input id="my-drawer" type="checkbox" className="drawer-toggle" />
-                        <div className="drawer-side">
-                            <label htmlFor="my-drawer" className="drawer-overlay"></label>
-                            <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
-                                {/* <!-- Sidebar content here --> */}
-                                <li><button>Arrays</button></li>
-                                <li><a>Linked Lists</a></li>
-                                <li><a>BFS</a></li>
-                                <li><a>DFS</a></li>
-                                <li><a>Dijkstras</a></li>
-                                <li><a>Dijkstras</a></li>
-
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
+                <SideBar display={displayModule} setDisplay={setDisplayModule}></SideBar>
                 <div className={styles.gridCol2}>
-                    <div className="tabs">
-                        <a className="tab tab-lifted">Tab 1</a>
-                        <a className="tab tab-lifted tab-active">Tab 2</a>
-                        <a className="tab tab-lifted">Tab 3</a>
-                    </div>
+                    <Modules display={displayModule}></Modules>
                 </div>
             </div>
 
             <footer className="footer footer-center p-4 bg-base-300 text-base-content">
                 <div>
-                    <p>Copyright © 2022 - All right reserved by ACME Industries Ltd</p>
+                    <p>Copyright © 2022 - All right reserved by Ethan Sabini</p>
                 </div>
             </footer>
+        </div >
+    )
+};
+
+export const Arrays = () => {
+    return (
+        <div className="tabs">
+            <a className="tab tab-lifted">Tab 1</a>
+            <a className="tab tab-lifted tab-active">Tab 2</a>
+            <a className="tab tab-lifted">Tab 3</a>
         </div>
     )
-}
+};
 
-export default Home
+export default Home;
