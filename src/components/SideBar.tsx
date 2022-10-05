@@ -1,49 +1,122 @@
 
 import styles from '../../styles/Home.module.css';
-
+import { useState } from 'react';
+import { Drawer, useMantineTheme, Button, Burger, Space } from '@mantine/core';
 interface SideBarProps {
     display: string;
     setDisplay: (dis: string) => void
 }
 
 const SideBar = ({ display, setDisplay }: SideBarProps) => {
-    return (
-        <>
-            <div className={styles.gridCol1}>
-                <div className="drawer-contentv mt-5">
-                    {/* <!-- Page content here --> */}
-                    <label htmlFor="my-drawer" className="btn btn-square btn-ghost">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5 stroke-current">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                    </label>
-                </div>
-                <div className="drawer">
-                    <input id="my-drawer" type="checkbox" className="drawer-toggle" />
-                    <div className="drawer-side">
-                        <label htmlFor="my-drawer" className="drawer-overlay"></label>
-                        <ul className="menu p-4 overflow-y-auto w-100 bg-base-100 text-base-content">
-                            {/* <!-- Sidebar content here --> */}
-                            <li><button onClick={() => setDisplay('Arrays')}>Arrays</button></li>
-                            <li><button onClick={() => setDisplay('Queues')}>Queues</button></li>
-                            <li><button onClick={() => setDisplay('Stacks')}>Stacks</button></li>
-                            <li><button onClick={() => setDisplay('Two Pointers')}>Two Pointers</button></li>
-                            <li><button onClick={() => setDisplay('Trie')}>Trie</button></li>
-                            <li><button onClick={() => setDisplay('Prefix Sums')}>Prefix Sums</button></li>
-                            <li><button onClick={() => setDisplay('Sliding Window')}>Sliding Window</button></li>
-                            <li><button onClick={() => setDisplay('Trees')}>Trees</button></li>
-                            <li><button onClick={() => setDisplay('Strings')}>Strings</button></li>
-                            <li><button onClick={() => setDisplay('Linked Lists')}>Linked Lists</button></li>
-                            <li><button onClick={() => setDisplay('Graphs')}>Graphs</button></li>
-                            <li><button onClick={() => setDisplay('BFS')}>BFS</button></li>
-                            <li><button onClick={() => setDisplay('DFS')}>DFS</button></li>
-                            <li><button onClick={() => setDisplay('Shortest Path')}>Shortest Paths</button></li>
-                            <li><button onClick={() => setDisplay('Union')}>Union</button></li>
-                        </ul>
-                    </div>
-                </div>
+    const theme = useMantineTheme();
+    const [opened, setOpened] = useState(false);
+    const title = opened ? 'Close navigation' : 'Open navigation';
 
+    return (
+        <div className={styles.gridCol1}>
+            <div>
+                <Burger
+                    opened={opened}
+                    onClick={() => setOpened((o) => !o)}
+                    title={title}
+                    size="lg"
+                />
             </div>
-        </>
+            <Drawer
+                overlayColor={theme.colorScheme === 'dark' ? theme.colors.dark[9] : theme.colors.gray[2]}
+                overlayOpacity={0.55}
+                overlayBlur={3}
+                opened={opened}
+                onClose={() => setOpened(false)}
+                padding="xl"
+                size="sm"
+                transition="skew-up"
+                transitionDuration={250}
+                transitionTimingFunction="ease"
+            >
+                <Button variant="outline" color="violet" radius="md"
+                    size="md" onClick={() => setDisplay('Arrays')}>
+                    Arrays
+                </Button>
+                <br></br>
+                <Space h="sm" />
+                <Button className={styles.sidebarButton} variant="outline" color="violet" radius="md"
+                    size="md" onClick={() => setDisplay('Stacks')}>
+                    Stacks
+                </Button>
+                <Space h="sm" />
+                <Button className={styles.sidebarButton} variant="outline" color="violet" radius="md"
+                    size="md" onClick={() => setDisplay('Two Pointers')}>
+                    Two Pointers
+                </Button>
+                <Space h="sm" />
+                <Button className={styles.sidebarButton} variant="outline" color="violet" radius="md"
+                    size="md" onClick={() => setDisplay('Trie')}>
+                    Trie
+                </Button>
+                <Space h="sm" />
+                <Button className={styles.sidebarButton} variant="outline" color="violet" radius="md"
+                    size="md" onClick={() => setDisplay('Prefix Sums')}>
+                    Prefix Sums
+                </Button>
+                <Space h="sm" />
+                <Button className={styles.sidebarButton} variant="outline" color="violet" radius="md"
+                    size="md" onClick={() => setDisplay('Linked Lists')}>
+                    Linked Lists
+                </Button>
+                <Space h="sm" />
+                <Button className={styles.sidebarButton} variant="outline" color="violet" radius="md"
+                    size="md" onClick={() => setDisplay('Trees')}>
+                    Trees
+                </Button>
+                <Space h="sm" />
+                <Button className={styles.sidebarButton} variant="outline" color="violet" radius="md"
+                    size="md" onClick={() => setDisplay('Strings')}>
+                    Strings
+                </Button>
+                <Space h="sm" />
+                <Button className={styles.sidebarButton} variant="outline" color="violet" radius="md"
+                    size="md" onClick={() => setDisplay('Two Pointers')}>
+                    Two Pointers
+                </Button>
+                <Space h="sm" />
+                <Button className={styles.sidebarButton} variant="outline" color="violet" radius="md"
+                    size="md" onClick={() => setDisplay('Graphs')}>
+                    Graphs
+                </Button>
+                <Space h="sm" />
+                <Button className={styles.sidebarButton} variant="outline" color="violet" radius="md"
+                    size="md" onClick={() => setDisplay('BFS')}>
+                    BFS
+                </Button>
+                <Space h="sm" />
+                <Button className={styles.sidebarButton} variant="outline" color="violet" radius="md"
+                    size="md" onClick={() => setDisplay('DFS')}>
+                    DFS
+                </Button>
+                <Space h="sm" />
+                <Button className={styles.sidebarButton} variant="outline" color="violet" radius="md"
+                    size="md" onClick={() => setDisplay('Binary Search')}>
+                    Binary Search
+                </Button>
+                <Space h="sm" />
+                <Button className={styles.sidebarButton} variant="outline" color="violet" radius="md"
+                    size="md" onClick={() => setDisplay('Sorting')}>
+                    Sorting
+                </Button>
+                <Space h="sm" />
+                <Button className={styles.sidebarButton} variant="outline" color="violet" radius="md"
+                    size="md" onClick={() => setDisplay('Shortest Path')}>
+                    Shortest Path
+                </Button>
+                <Space h="sm" />
+                <Button className={styles.sidebarButton} variant="outline" color="violet" radius="md"
+                    size="md" onClick={() => setDisplay('Union')}>
+                    Union
+                </Button>
+            </Drawer>
+
+        </div>
     )
 };
 

@@ -4,7 +4,7 @@
 
 .gridContainer {
   display: grid;
-  grid-template-columns: 1fr 8fr;
+  grid-template-columns: 2fr 8fr 2fr;
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
@@ -12,3 +12,8 @@
 
 .gridCol1 { grid-area: 1 / 1 / 2 / 2; }
 .gridCol2 { grid-area: 1 / 2 / 2 / 3; }
+
+.sidebarButton {
+    margin-left: 0.75 rem;
+    margin-top: 0.5 rem;
+}
