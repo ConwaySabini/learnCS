@@ -43,7 +43,7 @@ const Home: NextPage = () => {
         case 'shadesOfPurple': codeThemePackage = shadesOfPurple; break;
         case 'vsDark': codeThemePackage = vsDark; break;
         case 'vsLight': codeThemePackage = vsLight; break;
-        case 'vsLight': codeThemePackage = github; break;
+        case 'github': codeThemePackage = github; break;
         default: codeThemePackage = nightOwl; break;
     }
 

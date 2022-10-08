@@ -38,7 +38,7 @@ const SideBar = ({ opened, setOpened, display, setDisplay }: SideBarProps) => {
                 </Button>
                 <Space h="sm" />
                 <Button className={styles.sidebarButton} variant="subtle" color="violet" radius="md"
-                    size="md" onClick={() => setDisplay('Two Pointers')}>
+                    size="md" onClick={() => setDisplay('TwoPointers')}>
                     Two Pointers
                 </Button>
                 <Space h="sm" />
@@ -48,12 +48,12 @@ const SideBar = ({ opened, setOpened, display, setDisplay }: SideBarProps) => {
                 </Button>
                 <Space h="sm" />
                 <Button className={styles.sidebarButton} variant="subtle" color="violet" radius="md"
-                    size="md" onClick={() => setDisplay('Prefix Sums')}>
-                    Prefix Sums
+                    size="md" onClick={() => setDisplay('Prefix')}>
+                    Prefix
                 </Button>
                 <Space h="sm" />
                 <Button className={styles.sidebarButton} variant="subtle" color="violet" radius="md"
-                    size="md" onClick={() => setDisplay('Linked Lists')}>
+                    size="md" onClick={() => setDisplay('LinkedLists')}>
                     Linked Lists
                 </Button>
                 <Space h="sm" />
@@ -83,7 +83,7 @@ const SideBar = ({ opened, setOpened, display, setDisplay }: SideBarProps) => {
                 </Button>
                 <Space h="sm" />
                 <Button className={styles.sidebarButton} variant="subtle" color="violet" radius="md"
-                    size="md" onClick={() => setDisplay('Binary Search')}>
+                    size="md" onClick={() => setDisplay('BinarySearch')}>
                     Binary Search
                 </Button>
                 <Space h="sm" />
@@ -93,13 +93,18 @@ const SideBar = ({ opened, setOpened, display, setDisplay }: SideBarProps) => {
                 </Button>
                 <Space h="sm" />
                 <Button className={styles.sidebarButton} variant="subtle" color="violet" radius="md"
-                    size="md" onClick={() => setDisplay('Shortest Path')}>
+                    size="md" onClick={() => setDisplay('ShortestPath')}>
                     Shortest Path
                 </Button>
                 <Space h="sm" />
                 <Button className={styles.sidebarButton} variant="subtle" color="violet" radius="md"
                     size="md" onClick={() => setDisplay('Union')}>
                     Union
+                </Button>
+                <Space h="sm" />
+                <Button className={styles.sidebarButton} variant="subtle" color="violet" radius="md"
+                    size="md" onClick={() => setDisplay('BackTracking')}>
+                    BackTracking
                 </Button>
             </Drawer>
 

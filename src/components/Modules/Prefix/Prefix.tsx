@@ -2,11 +2,11 @@ import styles from '../../../../styles/Home.module.css'
 import { Tabs } from '@mantine/core';
 import { Prism } from '@mantine/prism';
 
-interface ShortestPathProps {
+interface PrefixProps {
     codeTheme: any;
 }
 
-const ShortestPath = ({ codeTheme }: ShortestPathProps) => {
+const Prefix = ({ codeTheme }: PrefixProps) => {
     let code: any = `
     int b = 4; 
 int a = 5;`;
@@ -60,4 +60,4 @@ int a = 5;`;
     )
 };
 
-export default ShortestPath;
+export default Prefix;

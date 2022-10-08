@@ -1,11 +1,11 @@
 import styles from '../../../../styles/Home.module.css'
 import { Tabs } from '@mantine/core';
 import { Prism } from '@mantine/prism';
-interface ArraysProps {
+interface TrieProps {
     codeTheme: any;
 }
 
-const Trie = ({ codeTheme }: ArraysProps) => {
+const Trie = ({ codeTheme }: TrieProps) => {
     let code: any = `
     using namespace std;
 #include <vector>

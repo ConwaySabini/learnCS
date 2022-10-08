@@ -15,6 +15,9 @@ const Navbar = ({ opened, setOpened, codeTheme, setCodeTheme }: NavbarProps) => 
     }
 
     return (
+
+
+
         <div className="navbar bg-base-100">
             <div className="flex-none">
                 <button onClick={() => handleClick()} className="btn btn-square btn-ghost">

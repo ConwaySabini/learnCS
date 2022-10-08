@@ -2,13 +2,13 @@
 module.exports = {
     content: [
         "./pages/**/*.{js,ts,jsx,tsx}",
-        "./components/**/*.{js,ts,jsx,tsx}",
+        "./src/components/**/*.{js,ts,jsx,tsx}",
     ],
     plugins: [require("daisyui")],
 
     daisyui: {
         styled: true,
-        themes: true,
+        themes: ["dark"],
         base: true,
         utils: true,
         logs: true,
