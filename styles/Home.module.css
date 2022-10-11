@@ -1,8 +1,9 @@
-.container {
-  
+.footer {
+    height: 5vh; 
 }
 
 .gridContainer {
+  min-height: 100vh;
   display: grid;
   grid-template-columns: 2fr 8fr 2fr;
   grid-template-rows: 1fr;

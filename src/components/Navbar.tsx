@@ -1,7 +1,3 @@
-
-import styles from '../../styles/Home.module.css';
-import { useState } from 'react';
-
 interface NavbarProps {
     opened: boolean;
     codeTheme: string;
@@ -15,9 +11,6 @@ const Navbar = ({ opened, setOpened, codeTheme, setCodeTheme }: NavbarProps) => 
     }
 
     return (
-
-
-
         <div className="navbar bg-base-100">
             <div className="flex-none">
                 <button onClick={() => handleClick()} className="btn btn-square btn-ghost">

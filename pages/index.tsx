@@ -1,12 +1,10 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
 import SideBar from '../src/components/SideBar';
 import Navbar from '../src/components/Navbar';
 import styles from '../styles/Home.module.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Modules from '../src/components/Modules';
-import { createStyles, Container, Group, Anchor } from '@mantine/core';
 import ultramin from 'prism-react-renderer/themes/ultramin';
 import nightOwl from 'prism-react-renderer/themes/nightOwl';
 import dracula from 'prism-react-renderer/themes/dracula';
@@ -66,6 +64,14 @@ const Home: NextPage = () => {
                     </div>
                 </div>
             </div>
+
+            <footer className="footer footer-center p-4 bg-base-300 text-base-content mt-12 static bottom-0">
+                <div className={styles.footer}>
+                    <div>
+                        <p>Copyright © 2022 - All right reserved by Ethan Sabini</p>
+                    </div>
+                </div>
+            </footer>
         </div>
     )
 };

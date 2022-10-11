@@ -1,7 +1,6 @@
 
 import styles from '../../styles/Home.module.css';
-import { useState } from 'react';
-import { Drawer, useMantineTheme, Button, Burger, Space } from '@mantine/core';
+import { Drawer, useMantineTheme, Button, Space } from '@mantine/core';
 interface SideBarProps {
     opened: boolean;
     display: string;
@@ -11,7 +10,6 @@ interface SideBarProps {
 
 const SideBar = ({ opened, setOpened, display, setDisplay }: SideBarProps) => {
     const theme = useMantineTheme();
-    const title = opened ? 'Close navigation' : 'Open navigation';
 
     return (
         <div className={styles.gridCol1}>
