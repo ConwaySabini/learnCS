@@ -1,19 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: [
-        "./pages/**/*.{js,ts,jsx,tsx}",
-        "./src/components/**/*.{js,ts,jsx,tsx}",
-    ],
-    plugins: [require("daisyui")],
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './src/components/**/*.{js,ts,jsx,tsx}',
+  ],
+  plugins: [require('daisyui')],
 
-    daisyui: {
-        styled: true,
-        themes: ["dark"],
-        base: true,
-        utils: true,
-        logs: true,
-        rtl: false,
-        prefix: "",
-        darkTheme: "dark",
-    },
+  daisyui: {
+    styled: true,
+    themes: ['dark'],
+    base: true,
+    utils: true,
+    logs: true,
+    rtl: false,
+    prefix: '',
+    darkTheme: 'dark',
+  },
 }

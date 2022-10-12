@@ -20,7 +20,7 @@
 
 👤 **Ethan Sabini**
 
-* Github: [@ConwaySabini](https://github.com/ConwaySabini)
+- Github: [@ConwaySabini](https://github.com/ConwaySabini)
 
 ## 🤝 Contributing
 
